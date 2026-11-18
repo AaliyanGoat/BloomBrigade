@@ -10,8 +10,10 @@ public class LevelData : ScriptableObject
     public int nestHealth = 100;
     public int hiveHealth = 100;
     public float targetTime = 45f;
+    [Range(0f, 1f)] public float threeStarHive = 0.8f;   // hive health share needed for the 3rd star
 
     public List<FlowerSetup> flowers = new List<FlowerSetup>();
+    public List<ThornSetup> thorns = new List<ThornSetup>();
     public List<Vector3> rocks = new List<Vector3>();
 
     public bool hasHoneyDrop = true;
@@ -31,6 +33,17 @@ public class FlowerSetup
     public int petalsMax = 20;
     public bool neverWilts = false;
     public Vector3 position = new Vector3(-2f, 0f, 14f);
+    public float slideRange = 0f;      // 0 = does not move; 2 = slides 2 units left and right
+    public float slideSpeed = 1.5f;    // units per second
+}
+
+// A thorn gate removes every second bee that passes. It can slide like a moving flower.
+[System.Serializable]
+public class ThornSetup
+{
+    public Vector3 position = new Vector3(0f, 0f, 10f);
+    public float slideRange = 2.5f;
+    public float slideSpeed = 2f;
 }
 
 // A repeating wave: "count" wasps every "interval" seconds, starting after "firstDelay".

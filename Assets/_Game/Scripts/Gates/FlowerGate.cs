@@ -25,6 +25,7 @@ public class FlowerGate : MonoBehaviour
 
     private FlowerSetup setup;
     private BeeSpawner spawner;
+    private int petalsMax;        // from the level + the Bloom upgrade
     private int petalsLeft;
     private bool isOpen;
     private float reopenTime;
@@ -87,7 +88,8 @@ public class FlowerGate : MonoBehaviour
     private void Open(bool withFeedback)
     {
         isOpen = true;
-        petalsLeft = setup.petalsMax;
+        petalsMax = setup.petalsMax + PlayerStats.BonusPetals;
+        petalsLeft = petalsMax;
         SetColor(openColor);
         flowerPunch.SetBaseScale(1f);
         UpdateRing();
@@ -99,7 +101,7 @@ public class FlowerGate : MonoBehaviour
     // Ring fill = petals left / petalsMax; turns red under lowPetalFraction.
     private void UpdateRing()
     {
-        float fraction = setup.petalsMax > 0 ? (float)petalsLeft / setup.petalsMax : 1f;
+        float fraction = petalsMax > 0 ? (float)petalsLeft / petalsMax : 1f;
         petalRing.fillAmount = fraction;
         petalRing.color = fraction < lowPetalFraction ? ringLowColor : ringColor;
     }

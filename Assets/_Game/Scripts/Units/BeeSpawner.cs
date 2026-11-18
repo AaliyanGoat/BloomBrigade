@@ -19,6 +19,8 @@ public class BeeSpawner : MonoBehaviour
 
     public GameTuning Tuning => tuning;
     public int ActiveCount => activeBees.Count;
+    public float FireRate { get; private set; }   // base + Fire rate upgrade (from PlayerStats)
+    public float BeeSpeed { get; private set; }   // base + Bee speed upgrade (from PlayerStats)
 
     // Build the pool and create poolPrewarm bees up front so play never has to Instantiate.
     private void Awake()
@@ -46,7 +48,7 @@ public class BeeSpawner : MonoBehaviour
         while (Time.time >= nextFireTime)
         {
             Fire();
-            nextFireTime += 1f / tuning.fireRate;
+            nextFireTime += 1f / FireRate;
         }
     }
 
@@ -86,11 +88,13 @@ public class BeeSpawner : MonoBehaviour
         pool.Release(bee);
     }
 
-    // Restart: every bee in the air goes back to the pool.
+    // Restart: every bee in the air goes back to the pool, and the upgraded stats are read again.
     public void ResetForNewRun()
     {
         for (int i = activeBees.Count - 1; i >= 0; i--)
             activeBees[i].Despawn();
         wasFiring = false;
+        FireRate = PlayerStats.FireRate;
+        BeeSpeed = PlayerStats.BeeSpeed;
     }
 }

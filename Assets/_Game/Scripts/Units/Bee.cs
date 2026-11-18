@@ -8,7 +8,7 @@ public class Bee : MonoBehaviour
 {
     private Rigidbody body;
     private BeeSpawner spawner;
-    private readonly HashSet<FlowerGate> usedFlowers = new HashSet<FlowerGate>();
+    private readonly HashSet<Component> usedGates = new HashSet<Component>();   // flowers and thorns already passed
     private int obstacleLayer;
 
     // isDead is set first when the bee is removed, so it can never hit two things in one physics step.
@@ -26,17 +26,17 @@ public class Bee : MonoBehaviour
     {
         spawner = owner;
         IsDead = false;
-        usedFlowers.Clear();
+        usedGates.Clear();
         transform.position = position;
         body.position = position;
-        body.linearVelocity = Vector3.forward * owner.Tuning.beeSpeed;
+        body.linearVelocity = Vector3.forward * owner.BeeSpeed;
     }
 
-    // Has this bee already gone through that flower?
-    public bool HasUsed(FlowerGate flower) => usedFlowers.Contains(flower);
+    // Has this bee already gone through that gate (flower or thorn)?
+    public bool HasUsed(Component gate) => usedGates.Contains(gate);
 
-    // Remember a flower so the bee cannot trigger it again.
-    public void MarkUsed(FlowerGate flower) => usedFlowers.Add(flower);
+    // Remember a gate so the bee cannot trigger it again.
+    public void MarkUsed(Component gate) => usedGates.Add(gate);
 
     // A bee that passes the end of the lane goes back to the pool.
     private void Update()
