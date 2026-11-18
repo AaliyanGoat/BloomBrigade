@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f0c76acd32e64449167ddbf49c1ed4, type: 3}
+  m_Name: Wasp_Soldier
+  m_EditorClassIdentifier: Assembly-CSharp::WaspData
+  displayName: Soldier
+  health: 3
+  speed: 1.5
+  hiveDamage: 10
+  prefab: {fileID: 6999833963106126488, guid: d1b23388b953ad94cad7a191eb9a9e5b, type: 3}

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c521ef6a323f4429452f98849d344e, type: 3}
+  m_Name: Level2_Garden
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  levelNumber: 2
+  levelName: Garden
+  nestHealth: 200
+  hiveHealth: 100
+  targetTime: 60
+  threeStarHive: 0.8
+  flowers:
+  - type: 0
+    value: 2
+    petalsMax: 20
+    neverWilts: 0
+    position: {x: -2, y: 0, z: 14}
+    slideRange: 0
+    slideSpeed: 1.5
+  - type: 1
+    value: 5
+    petalsMax: 30
+    neverWilts: 0
+    position: {x: 2, y: 0, z: 14}
+    slideRange: 0
+    slideSpeed: 1.5
+  thorns: []
+  rocks: []
+  hasHoneyDrop: 1
+  honeyDropPosition: {x: 0, y: 0.5, z: 22}
+  waves:
+  - wasp: {fileID: 11400000, guid: 365067f9ecae3aa48be57b8a3e1c84e6, type: 2}
+    count: 4
+    interval: 4
+    firstDelay: 2
+  - wasp: {fileID: 11400000, guid: 9906976dc91baec40bdb9d774ce39cb8, type: 2}
+    count: 1
+    interval: 8
+    firstDelay: 6

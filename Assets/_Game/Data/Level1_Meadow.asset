@@ -17,12 +17,16 @@ MonoBehaviour:
   nestHealth: 100
   hiveHealth: 100
   targetTime: 45
+  threeStarHive: 0.8
   flowers:
   - type: 0
     value: 2
     petalsMax: 20
     neverWilts: 1
     position: {x: -2, y: 0, z: 14}
+    slideRange: 0
+    slideSpeed: 1.5
+  thorns: []
   rocks:
   - {x: 2, y: 0.5, z: 14}
   hasHoneyDrop: 1
