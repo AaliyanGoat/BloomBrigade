@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 30
-  productGUID: 33c52ea0065586149989e912f838de97
+  productGUID: 02d7341d5123de146a567c77228f25ac
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: SemesterProjectFinal
+  productName: BloomBrigade
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -819,14 +819,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: SemesterProjectFinal
+  metroPackageName: BloomBrigade
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: SemesterProjectFinal
+  metroApplicationDescription: BloomBrigade
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -897,10 +897,10 @@ PlayerSettings:
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: bfd218c5-d132-40db-8e57-566bd4ceea9d
+  cloudProjectId: 52758037-b14e-4790-bf1f-689d226f0064
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: SemesterProjectFinal
+  projectName: BloomBrigade
   organizationId: muhammadaaliyanatif77
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
